@@ -1,0 +1,143 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge NEELABHRO ROY
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Date of Birth:} & 2nd September, 1998 \\
+    \textsc{Address:}   & New Delhi, India \\
+    \textsc{Phone:}     & +91-9871279992\\
+    \textsc{email:}     & \href{mailto:neelabhro16171@iiitd.ac.in}{neelabhro16171@iiitd.ac.in}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph & Aurora (The UAV club of IIITD):\\\textsc{August 2016-Present}&\emph{Crew Member, Core Hardware Team}\\&\emph{Team Leader, Journal Paper Team}\\&\footnotesize{An active member of the Core Hardware team of the IIITD UAV (Unmanned Aerial Ve-
+hicle) Club, Aurora.Have been working on the modelling and construction of RC planes and Drones. Part of the Team preparing for SUAS-AUVSI 2017, Maryland, USA. This competition requires students to design, integrate, and demonstrate a UAS (Unmanned Aircraft System), capable of autonomous flights and navigation, remote sensing via onboard payload sensors, and execution of a specific set of tasks.}\\\multicolumn{2}{c}{} \\
+ \textsc{October 2016-Present} & Cyborg (The Robotics Club of IIITD)  \\&\emph{Member; IED Projects Mentor}\\&\footnotesize{Continuously involved in taking up projects and also in mentoring other students with theirs'.}\\\multicolumn{2}{c}{} \\
+ \textsc{August 2016-Present} & Trivialis (The Quizzing Society of IIITD)  \\&\emph{Events Co-ordinator}\\&\footnotesize{An active and passionate member of Trivialis, regularly participating in its events and representing the college in various Inter-College competitions, simultaneously encouraging batch-mates and seniors for participating in its events..}\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{July 2016- Present}  & IIIT Delhi, \\
+& 1 st Year B.Tech Undergraduate , Electronics and Communication Engineering\\&\\
+\textsc{April 2014-March 2016} & DAV, Dayanand Vihar, New Delhi\\&Completed class XII, with 95.3 per cent (PCME) in XII Board Exam,\\
+& conducted by the CBSE.\\&\\
+\textsc{2002-2014} & Bal Bharati Public School, Brij Vihar\\& Completed class X, with a perfect 10 CGPA, without upgradation\\&\\
+\end{tabular}
+
+\section{Honors and Awards}
+NTSE-I conducted by NCERT, India\\
+Have won numerous accolades in various National, Inter-State and Inter-school Quizzes,
+Debates, Spellathons and Olympiads, throughout school and college life.
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+\textsc{English}&\\
+\textsc{Hindi}&\\
+\textsc{Bengali}&\\
+\end{tabular}
+
+\section{Skills}
+U.A.V. building (Drones and RC planes), Arduino, Raspberry Pi\\
+Linux, Leadership, Java, Matlab, Verilog\\
+Website Building, Electronics, Public Speaking\\
+Quizzing, Circuit Analysis, Management\\
+Shell Scripting, C, C++, Python
+
+\section{Projects}
+\begin{tabular}{r|p{11cm}}
+ \emph & A MultiPurpose Drone\\\textsc{January 2017-Present}&\\&\footnotesize{The prototype would be devised such that it could be used to deliver (Air-Drop) relief packages and provide support materials such as First-Aid and Food, in places of calamities and disasters, and also aid the Army in its rescue operations thereby.
+
+A second use which we plan to implement is that, it be used for detecting garbage dumps, which comes to existence with the help of a camera mounted on it which will be monitored by a ground technician who'll be saving the precise GPS co-ordinates which he'll be receiving from the UAV.This will use a RaspBerryPi and Real-Time Video capturing.
+
+In the same way, it could be used to zero down on the locations of broken roads which is a huge problem in our country.
+The above UAVs could be made available to municipalities for an efficient maintenance of the cities.}\\\multicolumn{2}{c}{} \\
+
+ \textsc{August 2016-Present} & Intelligent Unmanned Aerial Vehicle (UAV) \\&\footnotesize{A fixed-wing aircraft which could do a complete autonomous flight. Had 3 onboard cameras and a cloverleaf antenna. The plane could autodetect the targets lying on the ground, decode a QR code lying on the ground and also avoid virtual obstacles in air.
+}\\\multicolumn{2}{c}{} \\
+
+ \textsc{November 2016} & RC Plane to monitor variation in Air Quality with change in Altitude.\\&\footnotesize{Designed a Totally Self made 14 channel Remote Controlled Aeroplane to monitor variation of air quality with change in Altitude using an Arduino, DHT 22. MQ 135 and other sensors.
+
+}\\\multicolumn{2}{c}{} \\
+ \textsc{October 2016} & Device for monitoring change in Climatic Conditions\\&\footnotesize{Made a device to Monitor the Changes in Climatic Conditions with respect to Sunlight, CO2 levels, Humidity etc. using Arduino, DHT 11 , MQ 135.
+A low cost device which could be made available to farmers for facilitating efficient Agriculture.}\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+\end{document}
